@@ -4,7 +4,6 @@
 
 void yyerror(const char *str)
 {
-//	fprintf(stderr,"error: %s\n",str);
 	puts("I have no idea what you are talking about");
 }
 
@@ -43,7 +42,7 @@ commands:
 
 
 command:
-	define_symbol | define_conversion | query_value | query_credits
+	define_symbol | define_conversion | query_value | query_credits | error
 
 define_symbol:
 	WORD TOKIS SYMBOL
