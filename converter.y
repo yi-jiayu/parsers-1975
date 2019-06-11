@@ -16,9 +16,6 @@ int main()
 {
 	yyparse();
 }
-
-// char *heater="default";
-
 %}
 
 %token TOKIS TOKHOWMUCH TOKCREDITS TOKHOWMANYCREDITS EOL TOKQUERY TOKSILVER;
