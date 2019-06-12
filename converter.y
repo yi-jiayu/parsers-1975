@@ -40,6 +40,7 @@ commands:
 
 command:
 	define_symbol | define_conversion | query_value | query_credits | error
+	;
 
 define_symbol:
 	WORD TOKIS SYMBOL
