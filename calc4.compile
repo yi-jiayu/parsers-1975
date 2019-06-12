@@ -1,0 +1,3 @@
+lex calc3.l # we didn't change the lex file from calc3
+yacc -d calc4.y
+cc lex.yy.c y.tab.c -o calc4
