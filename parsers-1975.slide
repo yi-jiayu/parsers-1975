@@ -270,6 +270,44 @@ Tokens:
 - Does not actually recognise the value of the tokens yet
 - Syntax error when rules are not matched
 
+* Example 4
+
+- Lex can associate a number token with its numeric value
+- `example4.l`:
+
+.code example4.l
+
+- `yyval` is a variable that will be accessible to the parser
+
+* Example 4
+
+- Now we can print the actual value of the calculation instead of a generic message:
+
+.code -numbers example4.y 30,42
+
+- The value of `yyval` can be accessed using `$` syntax with the correspoding index
+
+* Example 4
+
+.code -numbers example4.y 44,63
+
+* Example 4
+
+- Output:
+
+	$ ./example4
+	123
+	= 123
+	2 + 2
+	= 4
+	1*4
+	= 4
+	1/0
+	Floating point exception: 8
+
+- Finally, a working calculator!
+- Handling floating point exceptions in C is a whole other story
+
 * References
 
 [[https://en.wikipedia.org/wiki/Lex_(software)][https://en.wikipedia.org/wiki/Lex_(software)]]
