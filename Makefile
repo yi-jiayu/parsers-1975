@@ -1,5 +1,5 @@
-example1: 
-	lex calc1.l
+example1: example1.l 
+	lex example1.l
 	cc lex.yy.c -o example1 -ll
 
 calc4: calc4.y calc3.l
