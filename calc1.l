@@ -3,10 +3,11 @@
 %}
 
 %%
-[0-9]+	puts("NUMBER");
-\+	puts("PLUS");
--	puts("MINUS");
-\*	puts("TIMES");
-\/	puts("DIVIDE");
+[0-9]+	printf("NUMBER ");
+\+	printf("PLUS ");
+-	printf("MINUS ");
+\*	printf("TIMES ");
+\/	printf("DIVIDE ");
+[ \t]	; // ignore whitespace
 %%
 

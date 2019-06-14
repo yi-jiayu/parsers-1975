@@ -1,3 +1,7 @@
+example1: 
+	lex calc1.l
+	cc lex.yy.c -o example1 -ll
+
 calc4: calc4.y calc3.l
 	lex calc3.l
 	yacc -d calc4.y
