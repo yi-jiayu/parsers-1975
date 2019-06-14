@@ -2,6 +2,10 @@ example1: example1.l
 	lex example1.l
 	cc lex.yy.c -o example1 -ll
 
+example2: example2.l
+	lex example2.l
+	cc lex.yy.c -o example2 -ll
+
 calc4: calc4.y calc3.l
 	lex calc3.l
 	yacc -d calc4.y
