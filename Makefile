@@ -16,6 +16,11 @@ example4: example4.l example4.y
 	yacc -d example4.y
 	cc lex.yy.c y.tab.c -o example4
 
+example5: example5.l example5.y
+	lex example5.l
+	yacc -d example5.y
+	cc lex.yy.c y.tab.c -o example5
+
 calc4: calc4.y calc3.l
 	lex calc3.l
 	yacc -d calc4.y
