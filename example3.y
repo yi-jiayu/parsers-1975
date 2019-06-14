@@ -2,19 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 
-void yyerror(const char *str)
-{
-	fprintf(stderr,"error: %s\n",str);
+void yyerror(const char *str) {
+	fprintf(stderr, "error: %s\n", str);
 }
 
-int yywrap()
-{
+int yywrap() {
 	return 1;
 }
 
-int main()
-{
-	yyparse();
+int main() {
+	return yyparse();
 }
 %}
 
