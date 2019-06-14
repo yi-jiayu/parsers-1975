@@ -413,6 +413,34 @@ Tokens:
 
 - Great!
 
+* Example 7
+
+- Finally, let's add some error handling, so our calculator doesn't crash after a single bad input
+- Yacc supports the special `error` rule, which can be used to catch syntax errors
+
+* Example 7
+
+- A line can either be empty, contain an expression or contain an error:
+
+.code -numbers example7.y 30,42
+
+- `yyerrok` is a special macro which resets the parser state after an error
+
+* Example 7
+
+- Output:
+
+	$ ./example7
+	hello
+	error: syntax error
+	i'm late
+	error: syntax error
+	1 * 2 * 3 * 4
+	= 24
+
+- All ok!
+
+
 * References
 
 [[https://en.wikipedia.org/wiki/Lex_(software)][https://en.wikipedia.org/wiki/Lex_(software)]]
