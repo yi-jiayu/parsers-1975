@@ -373,6 +373,46 @@ Tokens:
 
 - Still working!
 
+* Example 6
+
+- A good calculator should accept more than two operands at a time, for example `1+2+3`
+- It should also respect the order of operations
+- Yacc allows us to define associativity and precedence
+
+* Example 6
+
+- We can include precedence and associativity declarations, which are listed increasing order of precedence:
+
+.code -numbers example6.y 20,22
+
+- The pseudo-symbol `NEG` will be used to ensure negative numbers are handled correctly
+
+* Example 6
+
+- Next we can define `expr` recursively to handle any number of operands:
+
+.code -numbers example6.y 39,51
+
+- We specify that the rule for negative numbers follows the precedence of our `NEG` symbol, which was declared last and hence has the highest precedence.
+
+* Example 6
+
+- Output:
+
+	$ ./example6
+	-1 + 1
+	= 0
+	1 + -1
+	= 0
+	2 + 4 * 4
+	= 18
+	3 * 3 * 3 * 3
+	= 81
+	3 * 3 * 3 * 3 * -1
+	= -81
+
+- Great!
+
 * References
 
 [[https://en.wikipedia.org/wiki/Lex_(software)][https://en.wikipedia.org/wiki/Lex_(software)]]
